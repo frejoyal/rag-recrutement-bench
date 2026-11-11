@@ -1,0 +1,7 @@
+# Calculer avec les modèles locaux (python -m banc.evaluer --mode direct) et tracer le graphique.
+# Il faut aussi Ollama, avec les modèles bge-m3 et gemma4:e4b.
+-r requirements.txt
+requests==2.32.5
+sentence-transformers==5.1.1
+torch==2.12.1
+matplotlib==3.10.5

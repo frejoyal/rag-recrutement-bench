@@ -1,0 +1,3 @@
+# Recalculer les résultats à partir du cache (ce que fait la CI)
+numpy==2.4.6
+rank-bm25==0.2.2

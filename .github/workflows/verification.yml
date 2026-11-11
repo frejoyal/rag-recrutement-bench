@@ -1,0 +1,19 @@
+name: Vérification des résultats
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  resultats:
+    name: Résultats recalculés à partir du cache
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+      - name: Recalculer les 14 méthodes et comparer aux résultats publiés
+        run: python -m banc.evaluer --verifier
